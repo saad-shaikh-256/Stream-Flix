@@ -1,0 +1,54 @@
+@import url("https: //fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* Primary */
+  --Primary-Op-08: #6e6cdf14;
+  --Primary-Op-16: #6e6cdf29;
+  --Primary-Op-24: #6e6cdf3d;
+  --Primary-Op-32: #6e6cdf52;
+  --Primary-Op-48: #6e6cdf7a;
+  --Primary-Op-64: #6e6cdfa3;
+  --Primary-Op-80: #6e6cdfcc;
+  --Primary-Op-94: #6e6cdff0;
+  --Primary-Normal: #6e6cdf;
+  --Primary-Normal-Hover: #6261c5;
+  --Primary-Normal-Active: #5857b0;
+  --Primary-Dark: #4e4d99;
+  --Primary-Dark-Hover: #444382;
+  --Primary-Dark-Active: #3a396c;
+  --Primary-Darker: #312f56;
+
+  /* Neutrals */
+  --BaseWhite: #ffffff;
+  --NeutralColor-100: #fafafa;
+  --NeutralColor-200: #f5f5f5;
+  --NeutralColor-300: #eeeeee;
+  --NeutralColor-400: #e0e0e0;
+  --NeutralColor-500: #bdbdbd;
+  --NeutralColor-600: #9e9e9e;
+  --NeutralColor-700: #757575;
+  --NeutralColor-800: #616161;
+  --NeutralColor-900: #424242;
+  --NeutralColor-1000: #212121;
+  --BaseBlack: #111111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  transition: 0.5s;
+  overflow-wrap: break-word;
+}
+
+html,
+body {
+  background-color: var(--BaseWhite);
+  overflow-x: hidden;
+  width: 100dvw;
+  height: 100dvh;
+  color: var(--BaseBlack);
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
