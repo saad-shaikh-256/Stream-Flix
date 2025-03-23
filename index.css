@@ -44,11 +44,189 @@
 
 html,
 body {
-  background-color: var(--BaseWhite);
+  background-color: var(--BaseBlack);
   overflow-x: hidden;
-  width: 100dvw;
-  height: 100dvh;
-  color: var(--BaseBlack);
+  height: 100vh;
+  width: 100vw;
+  color: var(--BaseWhite);
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
+}
+
+#home {
+  height: 850px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    ),
+    linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.5) 50%,
+      #000 100%
+    ),
+    url(Assets/Images/Background/homeBg.svg) lightgray 50% / cover no-repeat;
+  padding: 40px 80px 80px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  #logo img {
+    height: 22px;
+    width: auto;
+  }
+
+  #links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--BaseWhite);
+    gap: 8px;
+
+    #language {
+      all: unset;
+      display: flex;
+      padding: 8px 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(11.100000381469727px);
+      cursor: pointer;
+    }
+
+    select {
+      all: unset;
+      font-size: 12px;
+      font-weight: 500;
+
+      option {
+        padding: 8px 18px;
+        background-color: var(--BaseWhite);
+        color: var(--BaseBlack);
+      }
+    }
+
+    #signIn {
+      all: unset;
+      display: flex;
+      padding: 8px 18px;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(11.100000381469727px);
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--BaseWhite);
+    }
+  }
+}
+
+main {
+  height: fit-content;
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px;
+
+  #movieDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+    align-self: stretch;
+
+    #titleContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      align-self: stretch;
+
+      #title {
+        color: var(--BaseWhite);
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 110%;
+      }
+
+      #ratings {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 14px;
+        font-weight: 500;
+
+        #imdb,#rotten {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          span {
+            color: var(--NeutralColor-400);
+          }
+        }
+      }
+    }
+
+    #containt {
+      color: var(--NeutralColor-400);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 140%;
+      letter-spacing: 0.2px;
+    }
+  }
+
+  #buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    gap: 16px;
+
+    #watchNow {
+      all: unset;
+      display: flex;
+      padding: 14px 24px 14px 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      border-radius: 12px;
+      background: #5857b0;
+      backdrop-filter: blur(11.100000381469727px);
+      cursor: pointer;
+    }
+    #watchLater {
+      all: unset;
+      display: flex;
+      padding: 14px 30px;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      border-radius: 12px;
+      border: 1.5px solid var(--NeutralColor-300);
+      color: var(--NeutralColor-300);
+      cursor: pointer;
+    }
+  }
 }

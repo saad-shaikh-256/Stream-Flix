@@ -1,11 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <!-- ••••• Website Title ••••• -->
    <title>StreamFlix - by shaikhsaad256@gmail.com</title>
+
+
+   <!-- ••••• Favicon ••••• -->
+   <link rel="icon" href="Assets/Logo/Favicon.svg" type="image/x-icon">
+
+
+   <!-- ••••• CSS Links ••••• -->
+   <link rel="stylesheet" href="index.css" />
 </head>
+
 <body>
 
+   <section id="home">
+      <nav>
+         <div id="logo">
+            <img src="Assets/Logo/Logo.svg" alt="Logo">
+         </div>
+         <div id="links">
+            <div id="language">
+               <img src="Assets/Icons/languageIcon.svg" alt="">
+               <select name="Options" id="Options">
+                  <option>English</option>
+                  <option>हिन्दी</option>
+               </select>
+               <img src="Assets/Icons/dropdownIcon.svg" alt="">
+            </div>
+            <button id="signIn">Sign In</button>
+         </div>
+      </nav>
+
+      <main>
+         <div id="movieDetails">
+            <div id="titleContainer">
+               <div id="title">
+                  John Wick: Chapter 3 Parabellum
+               </div>
+               <div id="ratings">
+                  <div id="imdb">
+                     <img src="Assets/Icons/imdbIcon.svg" alt="">
+                     <span>8.2 (12.827)</span>
+                  </div>
+                  <span>•</span>
+                  <div id="rotten">
+                     <img src="Assets/Icons/rottenIcon.svg" alt="">
+                     <span>97%</span>
+                  </div>
+               </div>
+            </div>
+            <div id="containt">Super Assassin John Wick is on the run after killing a member of the international
+               assassin’s guild, and with a $14
+               million price tag on his head – he is the target of hit men and women everywhere.</div>
+         </div>
+         <div id="buttons">
+            <button id="watchNow"><img src="Assets/Icons/playIcon.svg" alt="">Watch Now</button>
+            <button id="watchLater">Watch Later</button>
+         </div>
+      </main>
+   </section>
+
+
+   <!-- ••••• GSAP Links ••••• -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+   <!-- ••••• JS Links ••••• -->
+   <script src="index.js"></script>
 </body>
+
 </html>
