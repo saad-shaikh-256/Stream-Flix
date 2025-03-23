@@ -60,17 +60,13 @@ body {
   background-position: center center;
   object-fit: cover;
   background-repeat: no-repeat;
-  background: linear-gradient(
-      0deg,
+  background: linear-gradient(0deg,
       rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.4) 100%
-    ),
-    linear-gradient(
-      270deg,
+      rgba(0, 0, 0, 0.4) 100%),
+    linear-gradient(270deg,
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0.5) 50%,
-      #000 100%
-    ),
+      #000 100%),
     url(Assets/Images/Background/homeBg.svg) lightgray 50% / cover no-repeat;
   padding: 40px 80px 80px 80px;
   display: flex;
@@ -82,6 +78,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transform: translateY(100%);
+  opacity: 0;
+  overflow: hidden;
 
   #logo img {
     height: 22px;
@@ -148,12 +147,16 @@ main {
   align-items: start;
   gap: 24px;
 
+
   #movieDetails {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 48px;
     align-self: stretch;
+    transform: translateY(100%);
+    opacity: 0;
+    overflow: hidden;
 
     #titleContainer {
       display: flex;
@@ -176,10 +179,12 @@ main {
         font-size: 14px;
         font-weight: 500;
 
-        #imdb,#rotten {
+        #imdb,
+        #rotten {
           display: flex;
           align-items: center;
           gap: 8px;
+
           span {
             color: var(--NeutralColor-400);
           }
@@ -203,6 +208,9 @@ main {
     font-size: 14px;
     font-weight: 500;
     gap: 16px;
+    transform: translateY(100%);
+      opacity: 0;
+      overflow: hidden;
 
     #watchNow {
       all: unset;
@@ -216,6 +224,7 @@ main {
       backdrop-filter: blur(11.100000381469727px);
       cursor: pointer;
     }
+
     #watchLater {
       all: unset;
       display: flex;
