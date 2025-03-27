@@ -60,13 +60,17 @@ body {
   background-position: center center;
   object-fit: cover;
   background-repeat: no-repeat;
-  background: linear-gradient(0deg,
+  background: linear-gradient(
+      0deg,
       rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.4) 100%),
-    linear-gradient(270deg,
+      rgba(0, 0, 0, 0.4) 100%
+    ),
+    linear-gradient(
+      270deg,
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0.5) 50%,
-      #000 100%),
+      #000 100%
+    ),
     url(Assets/Images/Background/homeBg.svg) lightgray 50% / cover no-repeat;
   padding: 40px 80px 80px 80px;
   display: flex;
@@ -147,8 +151,8 @@ main {
   align-items: start;
   gap: 24px;
 
-
   #movieDetails {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -159,6 +163,7 @@ main {
     overflow: hidden;
 
     #titleContainer {
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -166,6 +171,7 @@ main {
       align-self: stretch;
 
       #title {
+        width: 100%;
         color: var(--BaseWhite);
         font-size: 48px;
         font-weight: 600;
@@ -173,6 +179,7 @@ main {
       }
 
       #ratings {
+        width: 100%;
         display: flex;
         align-items: center;
         gap: 16px;
@@ -193,6 +200,7 @@ main {
     }
 
     #containt {
+      width: 100%;
       color: var(--NeutralColor-400);
       font-size: 16px;
       font-weight: 500;
@@ -204,13 +212,13 @@ main {
   #buttons {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     font-size: 14px;
     font-weight: 500;
     gap: 16px;
     transform: translateY(100%);
-      opacity: 0;
-      overflow: hidden;
+    opacity: 0;
+    overflow: hidden;
 
     #watchNow {
       all: unset;
@@ -238,4 +246,109 @@ main {
       cursor: pointer;
     }
   }
+}
+
+@media only screen and (max-width: 480px) {
+  #home {
+    height: 100%;
+    width: 100%;
+    padding: 50px 20px 70px 20px;
+  }
+
+  nav {
+    #logo img {
+      height: 18px;
+      width: auto;
+    }
+
+    #links {
+      gap: 8px;
+
+      #language {
+        padding: 8px 20px;
+        gap: 4px;
+        display: none;
+      }
+
+      select {
+        font-size: 10px;
+      }
+
+      #signIn {
+        padding: 6px 14px;
+        gap: 6px;
+        font-size: 10px;
+        font-weight: 500;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  main {
+    width: 353px;
+    gap: 24px;
+
+    #movieDetails {
+      gap: 32px;
+
+      #titleContainer {
+        gap: 20px;
+
+        #title {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 120%;
+        }
+
+        #ratings {
+          gap: 16px;
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+
+      #containt {
+        width: 353px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+      }
+    }
+
+    #buttons {
+      font-size: 12px;
+
+      #watchNow {
+        padding: 12px 20px 12px 16px;
+        border-radius: 12px;
+
+        img {
+          height: 16px;
+          width: auto;
+        }
+      }
+
+      #watchLater {
+        padding: 12px 24px;
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+}
+
+@media (min-width: 1601px) {
 }
