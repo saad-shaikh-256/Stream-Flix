@@ -343,35 +343,6 @@ main {
 
   nav {
     #logo img {
-      height: 18px;
-      width: auto;
-    }
-
-    #links {
-      gap: 8px;
-
-      #language {
-        padding: 8px 20px;
-        gap: 4px;
-        display: none;
-      }
-
-      select {
-        font-size: 10px;
-      }
-
-      #signIn {
-        padding: 6px 14px;
-        gap: 6px;
-        font-size: 10px;
-        font-weight: 500;
-        border-radius: 8px;
-      }
-    }
-  }
-
-  nav {
-    #logo img {
       height: 20px;
     }
 
@@ -443,15 +414,113 @@ main {
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
+  #home {
+    height: 100%;
+    padding: 40px 50px;
+  }
+
+  nav {
+    #logo img {
+      height: 20px;
+    }
+
+    #links {
+      gap: 8px;
+
+      select {
+        font-size: 12px;
+      }
+
+      #signIn {
+        padding: 8px 18px;
+        gap: 6px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  main {
+    width: 70%;
+    gap: 24px;
+
+    #movieDetails {
+      gap: 38px;
+
+      #titleContainer {
+        gap: 22px;
+
+        #title {
+          font-size: 32px;
+        }
+      }
+
+      #containt {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+
+    #buttons {
+      #watchNow {
+        img {
+          height: 18px;
+          width: auto;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
+  #home {
+    height: 100%;
+    padding: 40px 50px;
+  }
+
+  main {
+    width: 60%;
+
+    #movieDetails {
+      gap: 42px;
+
+      #titleContainer {
+        #title {
+          font-size: 36px;
+        }
+      }
+    }
+
+    #buttons {
+      #watchNow {
+        img {
+          height: 20px;
+          width: auto;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
+  #home {
+    height: 100%;
+  }
+
+  main {
+    width: 520px;
+
+    #movieDetails {
+      #titleContainer {
+        #title {
+          font-size: 40px;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1201px) and (max-width: 1600px) {
+
 }
 
 @media (min-width: 1601px) {
