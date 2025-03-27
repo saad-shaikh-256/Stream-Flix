@@ -252,7 +252,7 @@ main {
   #home {
     height: 100%;
     width: 100%;
-    padding: 50px 20px 70px 20px;
+    padding: 40px 20px 70px 20px;
   }
 
   nav {
@@ -285,7 +285,7 @@ main {
   }
 
   main {
-    width: 353px;
+    width: 95%;
     gap: 24px;
 
     #movieDetails {
@@ -308,7 +308,6 @@ main {
       }
 
       #containt {
-        width: 353px;
         font-size: 12px;
         font-weight: 600;
         letter-spacing: 0.2px;
@@ -336,6 +335,111 @@ main {
 }
 
 @media (min-width: 481px) and (max-width: 600px) {
+  #home {
+    height: 100%;
+    width: 100%;
+    padding: 40px 40px 80px 40px;
+  }
+
+  nav {
+    #logo img {
+      height: 18px;
+      width: auto;
+    }
+
+    #links {
+      gap: 8px;
+
+      #language {
+        padding: 8px 20px;
+        gap: 4px;
+        display: none;
+      }
+
+      select {
+        font-size: 10px;
+      }
+
+      #signIn {
+        padding: 6px 14px;
+        gap: 6px;
+        font-size: 10px;
+        font-weight: 500;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  nav {
+    #logo img {
+      height: 20px;
+    }
+
+    #links {
+      gap: 8px;
+
+      #language {
+        display: flex;
+        padding: 8px 16px;
+        gap: 4px;
+        border-radius: 10px;
+      }
+      #signIn {
+        display: flex;
+        padding: 8px 16px;
+        border-radius: 10px;
+        font-size: 10px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  main {
+    width: 80%;
+    gap: 24px;
+
+    #movieDetails {
+      gap: 36px;
+
+      #titleContainer {
+        gap: 22px;
+
+        #title {
+          font-size: 28px;
+          font-weight: 700;
+          line-height: 120%;
+        }
+
+        #ratings {
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+
+      #containt {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+      }
+    }
+
+    #buttons {
+      font-size: 12px;
+
+      #watchNow {
+        padding: 12px 22px 12px 18px;
+
+        img {
+          height: 16px;
+          width: auto;
+        }
+      }
+
+      #watchLater {
+        padding: 12px 26px;
+      }
+    }
+  }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
