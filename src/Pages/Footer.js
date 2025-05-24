@@ -35,9 +35,9 @@ const Footer = () => {
             <h1 className="text-lg md:text-xl font-semibold">Company</h1>
             <div className="link-map text-neutralcolor-200 text-xs sm:text-sm flex flex-col gap-4">
               {companyLinks.map((link) => (
-                <a key={link} className="" href="#">
+                <button key={link} className="">
                   {link}
-                </a>
+                </button>
               ))}
             </div>
           </div>
@@ -45,9 +45,9 @@ const Footer = () => {
             <h1 className="text-lg md:text-xl font-semibold">Help & Support</h1>
             <div className="link-map text-neutralcolor-200 text-xs sm:text-sm flex flex-col gap-4">
               {helpLinks.map((link) => (
-                <a key={link} className="" href="#">
+                <button key={link} className="">
                   {link}
-                </a>
+                </button>
               ))}
             </div>
           </div>
@@ -55,9 +55,9 @@ const Footer = () => {
             <h1 className="text-lg md:text-xl font-semibold">Legal</h1>
             <div className="link-map text-neutralcolor-200 text-xs sm:text-sm flex flex-col gap-4">
               {legalLinks.map((link) => (
-                <a key={link} className="" href="#">
+                <button key={link} className="">
                   {link}
-                </a>
+                </button>
               ))}
             </div>
           </div>
