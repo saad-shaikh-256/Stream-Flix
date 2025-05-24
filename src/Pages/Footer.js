@@ -15,7 +15,7 @@ const Footer = () => {
       <footer className="h-fit w-full bg-baseblack text-basewhite font-poppins flex flex-col justify-center items-center px-5  pt-12 pb-8 gap-12 sm:px-10 sm:pt-14 sm:pb-9 sm:gap-14 md:px-15 md:pt-16 md:pb-9 md:gap-16 lg:px-20">
         <div
           id="footer-content"
-          className="w-full h-fit grid gap-12 grid-cols-2 justify-between items-start sm:grid-cols-3 lg:gap-0 lg:flex"
+          className="w-full h-fit grid gap-12 grid-cols-2 lg:flex justify-between items-start sm:grid-cols-3 lg:gap-0"
         >
           <div
             id="footer-details"
@@ -34,7 +34,7 @@ const Footer = () => {
             <h1 className="text-lg md:text-xl font-semibold">Company</h1>
             <div className="link-map text-neutralcolor-200 text-xs sm:text-sm flex flex-col gap-4">
               {companyLinks.map((link) => (
-                <a key={link} href="#" className="">
+                <a key={link} className="">
                   {link}
                 </a>
               ))}
@@ -44,7 +44,7 @@ const Footer = () => {
             <h1 className="text-lg md:text-xl font-semibold">Help & Support</h1>
             <div className="link-map text-neutralcolor-200 text-xs sm:text-sm flex flex-col gap-4">
               {helpLinks.map((link) => (
-                <a key={link} href="#" className="">
+                <a key={link} className="">
                   {link}
                 </a>
               ))}
@@ -54,7 +54,7 @@ const Footer = () => {
             <h1 className="text-lg md:text-xl font-semibold">Legal</h1>
             <div className="link-map text-neutralcolor-200 text-xs sm:text-sm flex flex-col gap-4">
               {legalLinks.map((link) => (
-                <a key={link} href="#" className="">
+                <a key={link} className="">
                   {link}
                 </a>
               ))}
