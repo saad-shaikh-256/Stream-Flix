@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../input.css";
 import "../output.css";
 import "../App.css";
 
 const Movies = () => {
+  const trendingRef = useRef(null);
+  const latestRef = useRef(null);
+  const exclusiveRef = useRef(null);
+  const popularRef = useRef(null);
+  const ratedRef = useRef(null);
+
+  const scrollLeft = (ref) => {
+    if (ref.current) ref.current.scrollBy({ left: -300, behavior: "smooth" });
+  };
+
+  const scrollRight = (ref) => {
+    if (ref.current) ref.current.scrollBy({ left: 300, behavior: "smooth" });
+  };
   const movieList = [
     {
       image: "/Assets/Images/moviePoster/Oppenhimer.png",
@@ -201,8 +214,12 @@ const Movies = () => {
       <img src={image} alt={name} />
       <div className="h-full w-full bg-black opacity-0 group-hover:opacity-40 group-focus:opacity-40 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
       <div className="h-fit w-full flex flex-col justify-center items-center gap-1 absolute bottom-[-100px] group-hover:bottom-5 group-focus:bottom-5">
-        <span className="h-fit w-full px-[5%] font-bold text-sm sm:text-base md:text-lg text-center">{name}</span>
-        <span className="h-fit w-fit font-medium text-[0.625rem] sm:text-xs">{details}</span>
+        <span className="h-fit w-full px-[5%] font-bold text-sm sm:text-base md:text-lg text-center">
+          {name}
+        </span>
+        <span className="h-fit w-fit font-medium text-[0.625rem] sm:text-xs">
+          {details}
+        </span>
       </div>
       <img
         src="/Assets/Icons/playIcon.svg"
@@ -226,15 +243,22 @@ const Movies = () => {
                 Trending Now
               </span>
               <span className=" h-fit w-fit flex justify-center items-center gap-2">
-                <button className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 ">
+                <button
+                  onClick={() => scrollLeft(trendingRef)}
+                  className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 "
+                >
                   <i className="hgi hgi-stroke hgi-arrow-left-01"></i>
                 </button>
-                <button className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 ">
+                <button
+                  onClick={() => scrollRight(trendingRef)}
+                  className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 "
+                >
                   <i className="hgi hgi-stroke hgi-arrow-right-01"></i>
                 </button>
               </span>
             </div>
             <div
+              ref={trendingRef}
               className="h-fit w-full flex justify-start items-center gap-6"
               id="movieCards"
             >
@@ -255,21 +279,100 @@ const Movies = () => {
                 Latest Releases
               </span>
               <span className=" h-fit w-fit flex justify-center items-center gap-2">
-                <button className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 ">
+                <button
+                  onClick={() => scrollLeft(latestRef)}
+                  className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 "
+                >
                   <i className="hgi hgi-stroke hgi-arrow-left-01"></i>
                 </button>
-                <button className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 ">
+                <button
+                  onClick={() => scrollRight(latestRef)}
+                  className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 "
+                >
                   <i className="hgi hgi-stroke hgi-arrow-right-01"></i>
                 </button>
               </span>
             </div>
             <div
+              ref={latestRef}
               className="h-fit w-full flex justify-start items-center gap-6"
               id="movieCards"
             >
               {animeList.map((item, index) => (
                 <MediaCard key={index} {...item} />
               ))}
+            </div>
+          </div>
+        </div>
+        {/* Movie Poster */}
+        <div
+          id="movies-poster"
+          className="h-100 w-full rounded-2xl p-10 hidden md:flex justify-start items-end"
+        >
+          <div
+            id="poster-content"
+            className="h-fit w-[525px] flex flex-col gap-6"
+          >
+            <div
+              id="movies-details"
+              className="h-fit w-fit flex flex-col gap-12"
+            >
+              <div
+                id="movie-heading"
+                className="h-fit w-fit flex flex-col gap-6"
+              >
+                <div id="movie-name" className="h-fit w-fit text-5xl font-bold">
+                  Cars 3
+                </div>
+                <div
+                  id="movie-rating"
+                  className="h-fit w-fit flex justify-center items-center gap-4"
+                >
+                  <div
+                    id="imdb"
+                    className="h-fit w-fit flex justify-center items-center gap-2 text-sm"
+                  >
+                    <img
+                      src="/Assets/Icons/imdbIcon.svg"
+                      alt="Imdb Icon"
+                      className="h-5 w-5"
+                    />
+                    <span>6.7 (134k)</span>
+                  </div>
+                  <div id="divider">•</div>
+                  <div
+                    id="rotten"
+                    className="h-fit w-fit flex justify-center items-center gap-2 text-sm"
+                  >
+                    <img
+                      src="/Assets/Icons/rottenIcon.svg"
+                      alt="Rotten Icon"
+                      className="h-5 w-5"
+                    />
+                    <span>69%</span>
+                  </div>
+                </div>
+              </div>
+              <div id="movie-description" className="h-fit w-fit text-base">
+                Lightning McQueen sets out to prove to a new generation of
+                racers that he's still the best race car in the world.
+              </div>
+            </div>
+            <div
+              id="movies-buttons"
+              className="h-fit w-fit flex justify-center items-center gap-4"
+            >
+              <button className="w-fit h-fit pl-5 pr-6 py-3 flex justify-center items-center border-2 border-primary-normal bg-primary-normal rounded-xl text-sm font-medium gap-1 cursor-pointer">
+                <img
+                  src="/Assets/Icons/playIcon.svg"
+                  alt="playIcon"
+                  className="w-auto h-4 "
+                />{" "}
+                Watch Now
+              </button>
+              <button className="w-fit h-fit px-6 py-3 flex justify-center items-center border-2 border-white rounded-xl text-sm font-medium cursor-pointer">
+                Watch Trailer
+              </button>
             </div>
           </div>
         </div>
@@ -284,15 +387,22 @@ const Movies = () => {
                 Exclusive Shows
               </span>
               <span className=" h-fit w-fit flex justify-center items-center gap-2">
-                <button className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 ">
+                <button
+                  onClick={() => scrollLeft(exclusiveRef)}
+                  className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 "
+                >
                   <i className="hgi hgi-stroke hgi-arrow-left-01"></i>
                 </button>
-                <button className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 ">
+                <button
+                  onClick={() => scrollRight(exclusiveRef)}
+                  className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 "
+                >
                   <i className="hgi hgi-stroke hgi-arrow-right-01"></i>
                 </button>
               </span>
             </div>
             <div
+              ref={exclusiveRef}
               className="h-fit w-full flex justify-start items-center gap-6"
               id="movieCards"
             >
@@ -313,15 +423,22 @@ const Movies = () => {
                 Most Popular
               </span>
               <span className=" h-fit w-fit flex justify-center items-center gap-2">
-                <button className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 ">
+                <button
+                  onClick={() => scrollLeft(popularRef)}
+                  className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 "
+                >
                   <i className="hgi hgi-stroke hgi-arrow-left-01"></i>
                 </button>
-                <button className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 ">
+                <button
+                  onClick={() => scrollRight(popularRef)}
+                  className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 "
+                >
                   <i className="hgi hgi-stroke hgi-arrow-right-01"></i>
                 </button>
               </span>
             </div>
             <div
+              ref={popularRef}
               className="h-fit w-full flex justify-start items-center gap-6"
               id="movieCards"
             >
@@ -342,15 +459,22 @@ const Movies = () => {
                 Top Rated
               </span>
               <span className=" h-fit w-fit flex justify-center items-center gap-2">
-                <button className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 ">
+                <button
+                  onClick={() => scrollLeft(ratedRef)}
+                  className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 "
+                >
                   <i className="hgi hgi-stroke hgi-arrow-left-01"></i>
                 </button>
-                <button className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 ">
+                <button
+                  onClick={() => scrollRight(ratedRef)}
+                  className="h-7 sm:h-8 w-7 text-neutral-400 sm:w-8 bg-neutral-800 flex flex-col justify-center items-center text-center rounded-full border-2 border-neutral-700 font-bold cursor-pointer text-xs sm:text-sm hover:bg-neutral-700 active:bg-neutral-700 active:border-neutral-600 hover:border-neutral-600 "
+                >
                   <i className="hgi hgi-stroke hgi-arrow-right-01"></i>
                 </button>
               </span>
             </div>
             <div
+              ref={ratedRef}
               className="h-fit w-full flex justify-start items-center gap-6"
               id="movieCards"
             >

@@ -45,3 +45,8 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+#movies-poster {
+  background: linear-gradient(90deg, #000 20%, rgba(0, 0, 0, 0) 100%),
+    url(../public/Assets/Images/moviePoster.png) lightgray 50% / cover no-repeat;
+}

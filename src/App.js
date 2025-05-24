@@ -1,4 +1,5 @@
 import "./App.css";
+import "./input.css";
 import "./output.css";
 import FAQs from "./Pages/FAQs";
 import Footer from "./Pages/Footer";
