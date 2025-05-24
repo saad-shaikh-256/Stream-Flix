@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import "../input.css";
 import "../output.css";
+
 const FAQs = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const faq = [
@@ -29,7 +31,7 @@ const FAQs = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quod soluta ex a inventore earum necessitatibus expedita asperiores voluptatum ab adipisci corrupti natus illum, velit eius delectus nostrum nesciunt iusto alias blanditiis perspiciatis? Adipisci, assumenda doloremque exercitationem ullam mollitia molestias.",
     },
     {
-      question: "is xilfteN good for kids?",
+      question: "is StreamFlix good for kids?",
       answer:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quod soluta ex a inventore earum necessitatibus expedita asperiores voluptatum ab adipisci corrupti natus illum, velit eius delectus nostrum nesciunt iusto alias blanditiis perspiciatis? Adipisci, assumenda doloremque exercitationem ullam mollitia molestias.",
     },

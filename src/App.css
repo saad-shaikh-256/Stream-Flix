@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+#movieCards::-webkit-scrollbar {
+  display: none;
+}
+#movieCards {
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
