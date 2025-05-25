@@ -231,14 +231,11 @@ const Movies = () => {
 
   return (
     <>
-      <section className="h-fit w-full bg-baseblack text-basewhite font-poppins flex flex-col justify-center items-start px-5 py-12 gap-12 sm:gap-16 md:gap-20 lg:gap-24 sm:px-10 sm:py-14 md:px-15 md:py-16 lg:px-20">
+      <section className="h-fit w-full bg-baseblack text-basewhite font-poppins flex flex-col justify-center items-start px-5 py-12 gap-12 sm:gap-16 md:gap-20 lg:gap-24 sm:px-10 sm:py-14 md:px-14 md:py-16 lg:px-20">
         {/* Trending Now */}
         <div className="h-fit w-full flex flex-col gap-4">
           <div className="h-fit w-full flex flex-col gap-8 justify-center items-center overflow-x-hidden">
-            <div
-              id="movies-Heading"
-              className="h-fit w-full flex justify-between items-center"
-            >
+            <div className="h-fit w-full flex justify-between items-center">
               <span className="h-fit w-full text-lg sm:text-xl lg:text-2xl font-bold">
                 Trending Now
               </span>
@@ -260,7 +257,7 @@ const Movies = () => {
             <div
               ref={trendingRef}
               className="h-fit w-full flex justify-start items-center gap-6"
-              id="movieCards"
+              id="movieCards1"
             >
               {movieList.map((item, index) => (
                 <MediaCard key={index} {...item} />
@@ -271,10 +268,7 @@ const Movies = () => {
         {/* Latest Releases */}
         <div className="h-fit w-full flex flex-col gap-4">
           <div className="h-fit w-full flex flex-col gap-8 justify-center items-center overflow-x-hidden">
-            <div
-              id="movies-Heading"
-              className="h-fit w-full flex justify-between items-center"
-            >
+            <div className="h-fit w-full flex justify-between items-center">
               <span className="h-fit w-full text-lg sm:text-xl lg:text-2xl font-bold">
                 Latest Releases
               </span>
@@ -296,7 +290,7 @@ const Movies = () => {
             <div
               ref={latestRef}
               className="h-fit w-full flex justify-start items-center gap-6"
-              id="movieCards"
+              id="movieCards2"
             >
               {animeList.map((item, index) => (
                 <MediaCard key={index} {...item} />
@@ -307,7 +301,7 @@ const Movies = () => {
         {/* Movie Poster */}
         <div
           id="movies-poster"
-          className="h-100 w-full rounded-2xl p-10 hidden md:flex justify-start items-end"
+          className="h-[400px] w-full rounded-2xl p-10 hidden md:flex justify-start items-end"
         >
           <div
             id="poster-content"
@@ -379,10 +373,7 @@ const Movies = () => {
         {/* Exclusive Shows */}
         <div className="h-fit w-full flex flex-col gap-4">
           <div className="h-fit w-full flex flex-col gap-8 justify-center items-center overflow-x-hidden">
-            <div
-              id="movies-Heading"
-              className="h-fit w-full flex justify-between items-center"
-            >
+            <div className="h-fit w-full flex justify-between items-center">
               <span className="h-fit w-full text-lg sm:text-xl lg:text-2xl font-bold">
                 Exclusive Shows
               </span>
@@ -404,7 +395,7 @@ const Movies = () => {
             <div
               ref={exclusiveRef}
               className="h-fit w-full flex justify-start items-center gap-6"
-              id="movieCards"
+              id="movieCards3"
             >
               {exclusiveList.map((item, index) => (
                 <MediaCard key={index} {...item} />
@@ -415,10 +406,7 @@ const Movies = () => {
         {/* Most Popular */}
         <div className="h-fit w-full flex flex-col gap-4">
           <div className="h-fit w-full flex flex-col gap-8 justify-center items-center overflow-x-hidden">
-            <div
-              id="movies-Heading"
-              className="h-fit w-full flex justify-between items-center"
-            >
+            <div className="h-fit w-full flex justify-between items-center">
               <span className="h-fit w-full text-lg sm:text-xl lg:text-2xl font-bold">
                 Most Popular
               </span>
@@ -440,7 +428,7 @@ const Movies = () => {
             <div
               ref={popularRef}
               className="h-fit w-full flex justify-start items-center gap-6"
-              id="movieCards"
+              id="movieCards4"
             >
               {movieList.map((item, index) => (
                 <MediaCard key={index} {...item} />
@@ -451,10 +439,7 @@ const Movies = () => {
         {/* Top Rated */}
         <div className="h-fit w-full flex flex-col gap-4">
           <div className="h-fit w-full flex flex-col gap-8 justify-center items-center overflow-x-hidden">
-            <div
-              id="movies-Heading"
-              className="h-fit w-full flex justify-between items-center"
-            >
+            <div className="h-fit w-full flex justify-between items-center">
               <span className="h-fit w-full text-lg sm:text-xl lg:text-2xl font-bold">
                 Top Rated
               </span>
@@ -476,7 +461,7 @@ const Movies = () => {
             <div
               ref={ratedRef}
               className="h-fit w-full flex justify-start items-center gap-6"
-              id="movieCards"
+              id="movieCards5"
             >
               {animeList.map((item, index) => (
                 <MediaCard key={index} {...item} />

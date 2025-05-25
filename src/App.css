@@ -37,10 +37,18 @@
   }
 }
 
-#movieCards::-webkit-scrollbar {
+#movieCards1::-webkit-scrollbar,
+#movieCards2::-webkit-scrollbar,
+#movieCards3::-webkit-scrollbar,
+#movieCards4::-webkit-scrollbar,
+#movieCards5::-webkit-scrollbar {
   display: none;
 }
-#movieCards {
+#movieCards1,
+#movieCards2,
+#movieCards3,
+#movieCards4,
+#movieCards5 {
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -51,7 +59,7 @@
     url(../public/Assets/Images/moviePoster.png) lightgray 50% / cover no-repeat;
 }
 
-#home-Screen{
+#home-Screen {
   background-size: cover;
   background-position: center center;
   object-fit: cover;
@@ -69,6 +77,6 @@
     ),
     url(../public/Assets/Images/homeBg.jpg) lightgray 50% / cover no-repeat;
 }
-#Options{
+#Options {
   all: unset;
 }
