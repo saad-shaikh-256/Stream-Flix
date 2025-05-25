@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <section
-        className="h-fit min-h-[100dvh] md:min-h-[850px] w-full bg-baseblack text-basewhite font-poppins flex flex-col justify-between items-start pt-10  px-5 sm:px-10 md:px-15 lg:px-20 pb-20"
+        className="h-fit min-h-[100dvh] md:min-h-[850px] w-full bg-baseblack text-basewhite font-poppins flex flex-col justify-between items-start pt-10  px-5 sm:px-10 md:px-14 lg:px-20 pb-20"
         id="home-Screen"
       >
         <nav className="h-fit w-full flex justify-between items-center">
@@ -21,18 +21,18 @@ const Home = () => {
           >
             <div
               id="language-Btn"
-              className="h-fit w-fit hidden sm:flex justify-center items-center border border-[#ffffff1a] bg-[#ffffff1f] cursor-pointer px-5 py-2 rounded-xl backdrop-blur-[11.100000381469727px] text-xs font-semibold gap-1"
+              className="h-fit w-fit hidden sm:flex justify-center items-center border border-[#ffffff1a] bg-[#ffffff1f] cursor-pointer px-5 py-2 rounded-xl backdrop-blur-[11px] text-xs font-semibold gap-1"
             >
-              <img src="/Assets/Icons/languageIcon.svg" alt="Imdb Icon" />
+              <img src="/Assets/Icons/languageIcon.svg" alt="Select language" />
               <select name="Options" id="Options">
                 <option className="text-black">English</option>
                 <option className="text-black">हिन्दी</option>
               </select>
-              <img src="/Assets/Icons/dropdownIcon.svg" alt="Imdb Icon" />
+              <img src="/Assets/Icons/dropdownIcon.svg" alt="Show options" />
             </div>
             <button
               id="signIn-Btn"
-              className="h-fit w-fit flex justify-center items-center border border-[#ffffff1a] bg-[#ffffff1f] cursor-pointer px-4 py-1.5 sm:px-5 sm:py-2 rounded-xl backdrop-blur-[11.100000381469727px]  text-[0.625rem] sm:text-xs font-semibold gap-1"
+              className="h-fit w-fit flex justify-center items-center border border-[#ffffff1a] bg-[#ffffff1f] cursor-pointer px-4 py-1.5 sm:px-5 sm:py-2 rounded-xl backdrop-blur-[11px]  text-[0.625rem] sm:text-xs font-semibold gap-1"
             >
               Sign In
             </button>
@@ -67,7 +67,7 @@ const Home = () => {
                   >
                     <img
                       src="/Assets/Icons/imdbIcon.svg"
-                      alt="Imdb Icon"
+                      alt="Imdb Logo"
                       className="h-auto w-4 sm:w-5"
                     />
                     <span>8.2 (12.827)</span>
@@ -81,7 +81,7 @@ const Home = () => {
                   >
                     <img
                       src="/Assets/Icons/rottenIcon.svg"
-                      alt="Rotten Icon"
+                      alt="Rotten Tomatoes logo"
                       className="h-auto w-4 sm:w-5"
                     />
                     <span>97%</span>
@@ -105,7 +105,7 @@ const Home = () => {
               <button className="h-fit w-fit flex justify-center items-center gap-1 py-3 sm:py-3.5 pl-4 pr-5 sm:pl-5 sm:pr-6 bg-primary-normal text-xs sm:text-sm rounded-xl font-medium border-2 border-primary-normal cursor-pointer">
                 <img
                   src="/Assets/Icons/playIcon.svg"
-                  alt="playIcon"
+                  alt="Play icon"
                   className="w-auto h-4 sm:h-5"
                 />
                 Watch Now
