@@ -6,6 +6,15 @@
 
 **StreamFlix** is a modern, responsive streaming platform UI that showcases trending movies, anime, exclusive shows, and more. Built with React and Tailwind CSS, it delivers a sleek, interactive experience inspired by leading streaming services.
 
+## 🚀 Live Preview & Design
+
+- **[Live Preview](https://stream-flixxx.vercel.app/)**
+  Experience StreamFlix in action.
+
+- **[Get the Design on Figma](https://www.figma.com/community/file/1309781252222655669/movie-streaming-site)**
+  View or duplicate the original Figma design.
+
+
 ## Features
 
 - **Home Page**: Eye-catching hero section with movie highlights and ratings.
