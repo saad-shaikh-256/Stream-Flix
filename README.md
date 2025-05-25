@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# StreamFlix
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![StreamFlix Cover](public/Assets/Cover/Full-Cover.png)
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+**StreamFlix** is a modern, responsive streaming platform UI that showcases trending movies, anime, exclusive shows, and more. Built with React and Tailwind CSS, it delivers a sleek, interactive experience inspired by leading streaming services.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Home Page**: Eye-catching hero section with movie highlights and ratings.
+- **Movies Page**:
+  - Browse by Trending, Latest Releases, Exclusive Shows, Most Popular, and Top Rated
+  - Horizontal scrollable carousels for each category
+  - Interactive media cards with hover/focus effects and play icons
+- **FAQs Section**: Expandable/collapsible answers to common questions.
+- **Footer**: Company info, quick links, and copyright.
+- **Responsive Design**: Optimized for desktop and mobile.
+- **Modern UI**: Uses custom fonts, icons (Hugeicons), and smooth transitions.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **HTML**
+- **CSS**
+- **Javascrip**
+- **React**
+- **Tailwind CSS**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+To run this project locally:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/saad-shaikh-256/stream-flix.git
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Navigate to the project folder:**
+    ```bash
+    cd stream-flix
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-### `npm run eject`
+4. **Start the development server:**
+    ```bash
+    npm start
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. **Open [http://localhost:3000](http://localhost:3000) in your browser.**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. *(Optional)* To watch Tailwind CSS changes:
+    ```bash
+    npm run dev
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Notes
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- This project is a **frontend-only** streaming platform UI. It does not include backend functionality such as authentication, user profiles, or media streaming.
+- You can extend this project by adding features like **user authentication**, **watchlists**, **movie detail pages**, or **backend integration** with services like Firebase or Node.js.
+- If you find any issues or have suggestions, feel free to contribute or report them in the GitHub repository.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Future Enhancements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- User authentication and profiles
+- Watchlist and favorites
+- Movie/series detail pages
+- Search and filter functionality
+- Dark mode toggle
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+🚀 **Designed & Developed by [Saad Shaikh](https://saad-shaikh.vercel.app/)**
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to suggest features, report bugs, or fork the project!
