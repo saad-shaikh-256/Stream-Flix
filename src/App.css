@@ -50,3 +50,25 @@
   background: linear-gradient(90deg, #000 20%, rgba(0, 0, 0, 0) 100%),
     url(../public/Assets/Images/moviePoster.png) lightgray 50% / cover no-repeat;
 }
+
+#home-Screen{
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    ),
+    linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.5) 50%,
+      #000 100%
+    ),
+    url(../public/Assets/Images/homeBg.jpg) lightgray 50% / cover no-repeat;
+}
+#Options{
+  all: unset;
+}
